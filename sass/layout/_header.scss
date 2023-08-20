@@ -1,0 +1,36 @@
+.header {
+  margin: 3.4rem 0;
+
+  &__grid {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+  }
+
+  &__nav {
+  }
+
+  &__ul {
+    display: flex;
+    list-style: none;
+    gap: 5.5rem;
+  }
+
+  &__list {
+  }
+
+  &__link {
+    color: #170c04;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  &__icons {
+  }
+}
