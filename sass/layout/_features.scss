@@ -1,0 +1,49 @@
+.features {
+  margin-top: 13rem;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 40px 25px 18px;
+    transition: all 300ms ease;
+    &:hover {
+      box-shadow: 0px 4px 14px 0px rgba(226, 123, 58, 0.15);
+      border: 1px solid #fff;
+    }
+  }
+
+  &__title {
+    color: #170c04;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__description {
+    color: #170c04;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+
+  &__link {
+    margin-top: 1.3rem;
+  }
+}
