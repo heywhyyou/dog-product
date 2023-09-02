@@ -56,6 +56,7 @@ html {
   gap: 3rem;
 }
 .features__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
@@ -69,6 +70,24 @@ html {
 .features__item:hover {
   box-shadow: 0px 4px 14px 0px rgba(226, 123, 58, 0.15);
   border: 1px solid #fff;
+}
+.features__images {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -2.9rem;
+  width: 6.3rem;
+  height: 5.4rem;
+}
+.features__images svg {
+  position: absolute;
+  z-index: 0;
+}
+.features__images img {
+  max-width: 100%;
+  width: 3.7rem;
 }
 .features__title {
   color: #170c04;
@@ -87,9 +106,10 @@ html {
   font-style: normal;
   font-weight: 400;
   line-height: 2.4rem;
+  margin-bottom: 1.3rem;
 }
 .features__link {
-  margin-top: 1.3rem;
+  margin-top: auto;
 }
 
 a {

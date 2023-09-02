@@ -8,6 +8,7 @@
   }
 
   &__item {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 1.1rem;
@@ -20,6 +21,25 @@
     &:hover {
       box-shadow: 0px 4px 14px 0px rgba(226, 123, 58, 0.15);
       border: 1px solid #fff;
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -2.9rem;
+    width: 6.3rem;
+    height: 5.4rem;
+    svg {
+      position: absolute;
+      z-index: 0;
+    }
+    img {
+      max-width: 100%;
+      width: 3.7rem;
     }
   }
 
@@ -41,9 +61,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: 2.4rem;
+    margin-bottom: 1.3rem;
   }
 
   &__link {
-    margin-top: 1.3rem;
+    margin-top: auto;
   }
 }
