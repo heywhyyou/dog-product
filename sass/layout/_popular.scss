@@ -1,0 +1,88 @@
+.popular {
+  &__heading {
+    text-align: center;
+    margin-top: 11.8rem;
+    margin-bottom: 1.8rem;
+  }
+
+  &__description {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 505px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      "a a a b b b"
+      "c c d d e e";
+    gap: 3rem;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:nth-child(1) {
+      grid-area: a;
+    }
+
+    &:nth-child(2) {
+      grid-area: b;
+    }
+
+    &:nth-child(3) {
+      grid-area: c;
+    }
+
+    &:nth-child(4) {
+      grid-area: d;
+    }
+
+    &:nth-child(5) {
+      grid-area: e;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #fcf2eb;
+    width: 100%;
+    min-height: 273px;
+    margin-top: 5rem;
+
+    &-big {
+      padding: 8rem 0;
+      img {
+        max-height: 270px;
+      }
+    }
+  }
+
+  &__image {
+  }
+
+  &__title {
+    color: #170c04;
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-top: 2.3rem;
+  }
+
+  &__link {
+    margin-top: 1.6rem;
+  }
+
+  &__button {
+  }
+}
+
+// * {
+//   outline: 1px solid red;
+// }
