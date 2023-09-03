@@ -7,6 +7,10 @@
     gap: 3rem;
   }
 
+  &__svg {
+    opacity: 0.15;
+  }
+
   &__item {
     position: relative;
     display: flex;
@@ -37,9 +41,21 @@
       position: absolute;
       z-index: 0;
     }
+
     img {
       max-width: 100%;
       width: 3.7rem;
+      z-index: 2;
+    }
+
+    &-white {
+      fill: #e9c5a5;
+    }
+    &-green {
+      fill: #6bac50;
+    }
+    &-orange {
+      fill: #fdbe24;
     }
   }
 

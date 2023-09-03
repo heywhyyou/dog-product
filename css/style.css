@@ -55,6 +55,9 @@ html {
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
 }
+.features__svg {
+  opacity: 0.15;
+}
 .features__item {
   position: relative;
   display: flex;
@@ -88,6 +91,16 @@ html {
 .features__images img {
   max-width: 100%;
   width: 3.7rem;
+  z-index: 2;
+}
+.features__images-white {
+  fill: #e9c5a5;
+}
+.features__images-green {
+  fill: #6bac50;
+}
+.features__images-orange {
+  fill: #fdbe24;
 }
 .features__title {
   color: #170c04;
