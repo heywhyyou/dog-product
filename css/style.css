@@ -166,6 +166,9 @@ p {
 .popular__card:nth-child(1), .popular__card:nth-child(2) {
   grid-template-rows: 42rem auto auto;
 }
+.popular__card:nth-child(1) .popular__title, .popular__card:nth-child(2) .popular__title {
+  font-size: 2.5rem;
+}
 .popular__card:nth-child(1) {
   grid-area: a;
 }
@@ -192,7 +195,7 @@ p {
 .popular__title {
   color: #170c04;
   font-family: "Poppins", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
   margin-top: 2.3rem;
 }
@@ -202,6 +205,52 @@ p {
 .popular__btn {
   margin-top: 4.6rem;
   text-align: center;
+}
+
+.care {
+  margin-top: 13rem;
+  margin-bottom: 13rem;
+}
+.care__grid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  grid-template-rows: 53.5rem;
+}
+.care__mask-img {
+  clip-path: url(#clipping);
+  overflow: hidden;
+  object-fit: cover;
+}
+.care__image {
+  position: relative;
+  display: flex;
+  pointer-events: none;
+  margin-left: -8rem;
+}
+.care__image svg {
+  position: absolute;
+}
+.care__details {
+  align-self: center;
+}
+.care__title {
+  margin-bottom: 0.4rem;
+  color: #f29555;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.32rem;
+  text-transform: uppercase;
+}
+.care__heading {
+  margin-bottom: 1.8rem;
+}
+.care__description {
+  margin-bottom: 4rem;
+}
+.care__buttons {
+  display: flex;
+  gap: 3rem;
 }
 
 a {

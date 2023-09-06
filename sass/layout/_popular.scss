@@ -1,4 +1,5 @@
 .popular {
+  $this: &;
   $cards-names: (a, b, c, d, e);
   &__heading {
     text-align: center;
@@ -31,6 +32,9 @@
     &:nth-child(1),
     &:nth-child(2) {
       grid-template-rows: 42rem auto auto;
+      #{$this}__title {
+        font-size: 2.5rem;
+      }
     }
 
     @for $i from 1 through length($cards-names) {
@@ -78,7 +82,7 @@
   &__title {
     color: #170c04;
     font-family: "Poppins", sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 500;
     margin-top: 2.3rem;
   }

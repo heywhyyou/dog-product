@@ -1,0 +1,53 @@
+// Care
+.care {
+  margin-top: 13rem;
+  margin-bottom: 13rem;
+  &__grid {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    grid-template-rows: 53.5rem;
+  }
+
+  &__mask-img {
+    clip-path: url(#clipping);
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  &__image {
+    position: relative;
+    display: flex;
+    pointer-events: none;
+    margin-left: -8rem;
+    svg {
+      position: absolute;
+    }
+  }
+
+  &__details {
+    align-self: center;
+  }
+
+  &__title {
+    margin-bottom: 0.4rem;
+    color: #f29555;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.32rem;
+    text-transform: uppercase;
+  }
+
+  &__heading {
+    margin-bottom: 1.8rem;
+  }
+
+  &__description {
+    margin-bottom: 4rem;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 3rem;
+  }
+}
