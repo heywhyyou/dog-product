@@ -253,6 +253,54 @@ p {
   gap: 3rem;
 }
 
+.subscription__heading {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.subscription__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+}
+.subscription__card {
+  display: grid;
+  grid-template-rows: 26.4rem auto auto auto;
+  justify-items: center;
+}
+.subscription__image {
+  mask-image: url(/img/dog-shape.svg);
+  mask-size: auto;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url(/img/dog-shape.svg);
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+.subscription__title {
+  margin-top: 5.1rem;
+  margin-bottom: 2.2rem;
+  color: #170c04;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.8rem; /* 140% */
+}
+.subscription__description {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.subscription__link {
+  margin-bottom: 4.6rem;
+}
+.subscription__btn.btn {
+  display: block;
+  margin: 0 auto;
+  max-width: max-content;
+}
+
 a {
   color: #f29555;
   text-align: center;
@@ -267,7 +315,7 @@ a {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
-  padding: 1.2rem 3rem;
+  padding: 1.45rem 3rem;
   border: none;
   display: inline-flex;
   align-items: center;
@@ -281,9 +329,11 @@ a {
   background: #fff;
   color: #f29555;
 }
+.btn-small-br, .btn-big-br {
+  border: 1px solid #f7c19c;
+}
 .btn-small-br {
   border-radius: 4px;
-  border: 1px solid #f29555;
 }
 .btn-big-br {
   border-radius: 24px;

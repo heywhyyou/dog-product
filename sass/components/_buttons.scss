@@ -6,7 +6,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
-  padding: 1.2rem 3rem;
+  padding: 1.45rem 3rem;
   border: none;
   display: inline-flex;
   align-items: center;
@@ -21,9 +21,13 @@
     color: #f29555;
   }
 
+  &-small-br,
+  &-big-br {
+    border: 1px solid lighten(#f29555, 15);
+  }
+
   &-small-br {
     border-radius: 4px;
-    border: 1px solid #f29555;
   }
 
   &-big-br {
