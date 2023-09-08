@@ -353,6 +353,49 @@ p {
   background: #fae8ed;
 }
 
+.cta {
+  margin: 7rem 0;
+}
+.cta__grid {
+  gap: 3rem;
+  display: grid;
+  padding: 0 6.7rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 34.6rem;
+  align-items: center;
+  background: url("/img/form-bg.svg") no-repeat center center;
+}
+.cta__form-group {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.cta__input {
+  padding: 2.5rem;
+  border: none;
+}
+.cta__input::placeholder {
+  color: #a29e9b;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.cta__btn.btn {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.cta__heading {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+}
+.cta__text {
+  color: #fff;
+  margin-top: 2rem;
+}
+
 a {
   color: #f29555;
   text-align: center;
@@ -372,6 +415,7 @@ a {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  justify-content: center;
 }
 .btn-primary {
   background: #f29555;
