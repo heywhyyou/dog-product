@@ -8,6 +8,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 3rem;
+    margin-bottom: 4.6rem;
   }
 
   &__card {
@@ -29,24 +30,13 @@
   }
 
   &__title {
-    margin-top: 5.1rem;
-    margin-bottom: 2.2rem;
-    color: #170c04;
+    margin: 5.1rem 0 2.2rem;
     text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 2.8rem; /* 140% */
   }
 
   &__description {
     margin-bottom: 1.5rem;
     text-align: center;
-  }
-
-  &__link {
-    margin-bottom: 4.6rem;
   }
 
   &__btn.btn {
@@ -55,19 +45,3 @@
     max-width: max-content;
   }
 }
-
-//   &__image {
-// mask-image: url(/img/clipDog.svg);
-// mask-size: auto;
-// mask-repeat: no-repeat;
-// mask-position: center;
-
-// -webkit-mask-image: url(/img/clipDog.svg);
-// -webkit-mask-size: contain;
-// -webkit-mask-repeat: no-repeat;
-// -webkit-mask-position: center;
-//   img{
-//     height: 100%;
-//     object-fit: cover;
-//   }
-// }

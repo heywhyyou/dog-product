@@ -18,11 +18,28 @@ html {
   margin: 0 auto;
 }
 
-h2 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #170c04;
   font-family: "Poppins", sans-serif;
-  font-size: 3.2rem;
   font-weight: 500;
+}
+
+h1 {
+  font-size: 10rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 p {
@@ -261,6 +278,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 3rem;
+  margin-bottom: 4.6rem;
 }
 .subscription__card {
   display: grid;
@@ -278,27 +296,61 @@ p {
   -webkit-mask-position: center;
 }
 .subscription__title {
-  margin-top: 5.1rem;
-  margin-bottom: 2.2rem;
-  color: #170c04;
+  margin: 5.1rem 0 2.2rem;
   text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 2.8rem; /* 140% */
 }
 .subscription__description {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-.subscription__link {
-  margin-bottom: 4.6rem;
-}
 .subscription__btn.btn {
   display: block;
   margin: 0 auto;
   max-width: max-content;
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 12rem;
+}
+.gallery__heading {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+.gallery__description {
+  text-align: center;
+  margin-bottom: 4.3rem;
+}
+.gallery__grid-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 17rem;
+  column-gap: 2rem;
+  row-gap: 3rem;
+}
+.gallery__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #fae8ed;
+}
+.gallery__wrapper:nth-child(1) {
+  background: #f4e7e6;
+}
+.gallery__wrapper:nth-child(2) {
+  background: #eaecf3;
+}
+.gallery__wrapper:nth-child(3) {
+  background: #f3e6ea;
+}
+.gallery__wrapper:nth-child(4) {
+  background: #faf4f7;
+}
+.gallery__wrapper.gallery__preview {
+  background: #fae8ed;
 }
 
 a {
