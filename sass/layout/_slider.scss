@@ -1,0 +1,39 @@
+.slider {
+  margin: 12rem 0;
+  position: relative;
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 27rem;
+  }
+  &__heading {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  &__item {
+    background: #ffffff;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.06);
+    padding: 2.5rem 2.8rem;
+  }
+}
+
+.swiper {
+  width: 100%;
+  max-width: 55rem;
+  margin: 0 auto;
+}
+
+.swiper-cards .swiper-slide:not(.swiper-slide.swiper-slide-active) {
+  rotate: -2deg !important;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
