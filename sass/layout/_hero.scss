@@ -1,7 +1,55 @@
 .hero {
-  height: 50rem;
-  background-color: palegreen;
-  max-width: 1140px;
+  padding-top: 10rem;
   width: 100%;
   margin: 0 auto;
+  background: rgba(226, 123, 58, 0.15);
+
+  &__grid {
+    display: grid;
+    grid-template-rows: 50rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  &__text {
+  }
+
+  &__welcome {
+    color: #848484;
+    font-family: Poppins;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 2.4rem */
+  }
+
+  &__title {
+    color: #3c424c;
+    font-family: Poppins;
+    font-size: 7rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 8.4rem */
+  }
+
+  &__description {
+    margin-top: 0.5rem;
+    color: #848484;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 1.92rem */
+  }
+
+  &__buttons {
+    margin-top: 2.7rem;
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__image {
+    height: 100%;
+    justify-self: center;
+  }
 }

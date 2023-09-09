@@ -1,5 +1,7 @@
 .header {
-  margin: 3.4rem 0;
+  padding: 3.4rem 0;
+  position: absolute;
+  width: 100%;
 
   &__grid {
     display: flex;
