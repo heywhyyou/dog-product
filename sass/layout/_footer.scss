@@ -2,15 +2,38 @@
   margin-top: 13.8rem;
   background-color: #140a03;
 
+  .container {
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+      width: 100%;
+      height: 6.2rem;
+      top: -6.1rem;
+      background-color: #140a03;
+      grid-column: 2 / 3;
+      z-index: -1;
+    }
+    > * {
+      grid-column: 1 / -1;
+    }
+  }
   &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: -14px;
   }
 
   &__grid {
     display: grid;
+    padding: 4rem 0 8.2rem;
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  &__contacts {
+    position: relative;
   }
 
   &__ul {
@@ -18,9 +41,6 @@
     display: flex;
     flex-direction: column;
     gap: 3.7rem;
-  }
-
-  &__list {
   }
 
   &__link,

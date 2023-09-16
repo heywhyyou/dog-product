@@ -11,11 +11,45 @@
     margin-bottom: 5rem;
   }
   &__item {
-    background: #ffffff;
     border-radius: 1rem;
     background: #fff;
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.06);
     padding: 2.5rem 2.8rem;
+  }
+
+  &__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    img {
+      max-width: 30px;
+    }
+  }
+
+  &__description {
+    color: #9e9996;
+    text-align: center;
+  }
+
+  &__name {
+    color: #170c04;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem; /* 150% */
+  }
+
+  &__job {
+    color: #9e9996;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem; /* 200% */
   }
 }
 
@@ -25,15 +59,12 @@
   margin: 0 auto;
 }
 
-.swiper-cards .swiper-slide:not(.swiper-slide.swiper-slide-active) {
-  rotate: -2deg !important;
-}
 .swiper-slide {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 18px;
   font-size: 22px;
   font-weight: bold;
-  color: #fff;
 }
