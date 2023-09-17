@@ -13,9 +13,10 @@ html {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1170px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 h1,
@@ -127,6 +128,12 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
+}
+@media (width <= 768px) {
+  .features__grid {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
 }
 .features__svg {
   opacity: 0.15;
@@ -249,6 +256,7 @@ p {
   border-radius: 10px;
   background: #fcf2eb;
   width: 100%;
+  padding: 2rem;
 }
 .popular__title {
   color: #170c04;
@@ -256,6 +264,7 @@ p {
   font-size: 2rem;
   font-weight: 500;
   margin-top: 2.3rem;
+  text-align: center;
 }
 .popular__link {
   margin-top: 1.6rem;

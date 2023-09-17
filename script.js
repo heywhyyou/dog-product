@@ -18,6 +18,13 @@ const swiper = new Swiper(".mySwiper", {
   // }
 });
 
+/*
+ <!-- <div class="swiper-controls">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div> -->
+*/
+
 document.querySelector(".stars").addEventListener("click", function (e) {
   console.log(e.target);
 });

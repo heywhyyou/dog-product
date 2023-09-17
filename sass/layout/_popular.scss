@@ -44,27 +44,6 @@
         grid-area: $value;
       }
     }
-
-    // TODO: delete comments
-    // &:nth-child(1) {
-    //   grid-area: a;
-    // }
-
-    // &:nth-child(2) {
-    //   grid-area: b;
-    // }
-
-    // &:nth-child(3) {
-    //   grid-area: c;
-    // }
-
-    // &:nth-child(4) {
-    //   grid-area: d;
-    // }
-
-    // &:nth-child(5) {
-    //   grid-area: e;
-    // }
   }
 
   &__wrapper {
@@ -74,9 +53,7 @@
     border-radius: 10px;
     background: #fcf2eb;
     width: 100%;
-  }
-
-  &__image {
+    padding: 2rem;
   }
 
   &__title {
@@ -85,6 +62,7 @@
     font-size: 2rem;
     font-weight: 500;
     margin-top: 2.3rem;
+    text-align: center;
   }
 
   &__link {
@@ -96,7 +74,3 @@
     text-align: center;
   }
 }
-
-// * {
-//   outline: 1px solid red;
-// }
