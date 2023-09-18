@@ -1,4 +1,5 @@
-// Care
+@use "../abstracts/variables" as *;
+
 .care {
   margin-top: 13rem;
   margin-bottom: 13rem;
@@ -6,13 +7,29 @@
     display: grid;
     grid-template-columns: 7fr 5fr;
     grid-template-rows: 53.5rem;
+    @media (width <= map-get($breakpoints, lg)) {
+      grid-template-columns: 1fr;
+      gap: 5rem;
+    }
   }
 
-  &__mask-img {
-    clip-path: url(#clipping);
-    overflow: hidden;
-    object-fit: cover;
+  &__mask {
+    mask-image: url(/img/care-mask.svg);
+    mask-size: auto;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    -webkit-mask-image: url(/img/care-mask.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
   }
+
+  // &__mask-img {
+  //   clip-path: url(#clipping);
+  //   overflow: hidden;
+  //   object-fit: cover;
+  // }
 
   &__image {
     position: relative;
@@ -22,10 +39,16 @@
     svg {
       position: absolute;
     }
+    @media (width <= map-get($breakpoints, lg)) {
+      margin-left: 0;
+    }
   }
 
   &__details {
     align-self: center;
+    @media (width <= map-get($breakpoints, lg)) {
+      text-align: center;
+    }
   }
 
   &__title {
@@ -49,5 +72,11 @@
   &__buttons {
     display: flex;
     gap: 3rem;
+    @media (width <= map-get($breakpoints, lg)) {
+      justify-content: center;
+    }
+    @media (width <= map-get($breakpoints, md)) {
+      flex-direction: column;
+    }
   }
 }

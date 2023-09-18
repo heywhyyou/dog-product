@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 .popular {
   $this: &;
   $cards-names: (a, b, c, d, e);
@@ -21,6 +23,22 @@
       "c c d d e e";
     gap: 3rem;
     margin-top: 5rem;
+    @media (width <= map-get($breakpoints, lg)) {
+      grid-template-areas:
+        "a a a b b b"
+        "c c c d d d"
+        "e e e e e e";
+    }
+
+    @media (width <= map-get($breakpoints, md)) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e";
+    }
   }
 
   &__card {

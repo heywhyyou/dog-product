@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 .gallery {
   $this: &;
 
@@ -6,6 +8,12 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 12rem;
+    @media (width <= map-get($breakpoints, md)) {
+      grid-template-columns: 1fr;
+    }
+    @media (width <= map-get($breakpoints, sm)) {
+      gap: 3rem;
+    }
   }
 
   &__items {
@@ -27,6 +35,9 @@
     grid-auto-rows: 17rem;
     column-gap: 2rem;
     row-gap: 3rem;
+    @media (width <= map-get($breakpoints, sm)) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__wrapper {

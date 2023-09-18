@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 .cta {
   margin: 7rem 0;
   &__grid {
@@ -7,7 +9,66 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 34.6rem;
     align-items: center;
-    background: url("/img/form-bg.svg") no-repeat center center;
+    clip-path: polygon(
+      0% 11.495%,
+      0% 11.495%,
+      0.011% 11.034%,
+      0.043% 10.596%,
+      0.095% 10.186%,
+      0.164% 9.811%,
+      0.249% 9.476%,
+      0.348% 9.187%,
+      0.46% 8.95%,
+      0.583% 8.769%,
+      0.715% 8.652%,
+      0.854% 8.603%,
+      99.1% 0.078%,
+      99.1% 0.078%,
+      99.245% 0.105%,
+      99.383% 0.206%,
+      99.512% 0.376%,
+      99.63% 0.609%,
+      99.735% 0.898%,
+      99.825% 1.236%,
+      99.899% 1.619%,
+      99.954% 2.04%,
+      99.988% 2.492%,
+      100% 2.97%,
+      100% 88.584%,
+      100% 88.584%,
+      99.989% 89.044%,
+      99.957% 89.482%,
+      99.905% 89.892%,
+      99.836% 90.267%,
+      99.751% 90.602%,
+      99.652% 90.891%,
+      99.54% 91.129%,
+      99.417% 91.309%,
+      99.285% 91.426%,
+      99.146% 91.475%,
+      0.9% 100%,
+      0.9% 100%,
+      0.755% 99.973%,
+      0.617% 99.872%,
+      0.488% 99.702%,
+      0.37% 99.469%,
+      0.265% 99.181%,
+      0.175% 98.842%,
+      0.101% 98.459%,
+      0.046% 98.038%,
+      0.012% 97.586%,
+      0% 97.108%,
+      0% 11.495%
+    );
+    background-color: #2e96ff;
+    @media (width <= map-get($breakpoints, md)) {
+      grid-template-columns: 1fr;
+      grid-template-rows: unset;
+      background-size: cover;
+    }
+    @media (width <= map-get($breakpoints, sm)) {
+      padding-inline: 3rem;
+    }
   }
 
   &__form-group {
@@ -15,6 +76,9 @@
     grid-template-columns: 3fr 1fr;
     border-radius: 1rem;
     overflow: hidden;
+    @media (width <= map-get($breakpoints, sm)) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__input {
@@ -25,6 +89,19 @@
       font-family: "Roboto", sans-serif;
       font-size: 1.6rem;
       font-weight: 400;
+    }
+  }
+
+  &__info {
+    @media (width <= map-get($breakpoints, md)) {
+      margin-top: 3rem;
+      text-align: center;
+    }
+  }
+
+  &__form-wrapper {
+    @media (width <= map-get($breakpoints, md)) {
+      padding-bottom: 4rem;
     }
   }
 
