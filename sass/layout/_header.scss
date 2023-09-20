@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 .header {
   padding: 3.4rem 0;
   position: absolute;
@@ -10,19 +12,10 @@
     align-items: center;
   }
 
-  &__logo {
-  }
-
-  &__nav {
-  }
-
   &__ul {
     display: flex;
     list-style: none;
     gap: 5.5rem;
-  }
-
-  &__list {
   }
 
   &__link {
@@ -33,6 +26,11 @@
     text-decoration: none;
   }
 
-  &__icons {
+  &__nav,
+  &__cart,
+  &__search {
+    @media (width <= map-get($breakpoints, md)) {
+      display: none;
+    }
   }
 }

@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 .hero {
   padding-top: 10rem;
   width: 100%;
@@ -9,9 +11,17 @@
     grid-template-rows: 50rem;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    @media (width <= map-get($breakpoints, lg)) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__text {
+    @media (width <= map-get($breakpoints, lg)) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__welcome {
@@ -30,6 +40,12 @@
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 8.4rem */
+    @media (width <= map-get($breakpoints, lg)) {
+      text-align: center;
+    }
+    @media (width <= map-get($breakpoints, sm)) {
+      font-size: 5rem;
+    }
   }
 
   &__description {
@@ -40,6 +56,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 1.92rem */
+    @media (width <= map-get($breakpoints, lg)) {
+      text-align: center;
+    }
   }
 
   &__buttons {

@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 .footer {
   margin-top: 13.8rem;
   background-color: #140a03;
@@ -29,10 +31,22 @@
     margin-top: -14px;
   }
 
+  &__contacts {
+    @media (width <= map-get($breakpoints, md)) {
+      grid-row: 2;
+    }
+  }
+
   &__grid {
     display: grid;
     padding: 4rem 0 8.2rem;
     grid-template-columns: repeat(3, 1fr);
+    @media (width <= map-get($breakpoints, md)) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      gap: 3rem;
+    }
+
     position: relative;
   }
 
@@ -52,12 +66,26 @@
     font-weight: 400;
     line-height: normal;
     opacity: 0.8;
+    @media (width <= map-get($breakpoints, md)) {
+      text-align: center;
+    }
+  }
+
+  &__list &__list-conact {
+    @media (width <= map-get($breakpoints, md)) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__socials {
     display: flex;
     flex-direction: column;
     gap: 6.6rem;
+    @media (width <= map-get($breakpoints, md)) {
+      grid-column: 1 / -1;
+      gap: 3.3rem;
+    }
   }
 
   &__heading {
@@ -88,5 +116,20 @@
 
   &__navigation &__ul {
     align-items: flex-end;
+  }
+
+  &__navigation {
+    @media (width <= map-get($breakpoints, md)) {
+      grid-row: 3;
+      grid-column: 1 / -1;
+      align-items: center;
+    }
+  }
+
+  &__navigation &__ul,
+  &__contacts &__ul {
+    @media (width <= map-get($breakpoints, md)) {
+      align-items: center;
+    }
   }
 }
