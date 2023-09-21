@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .subscription {
   &__heading {
@@ -47,15 +48,7 @@
   }
 
   &__image {
-    mask-image: url(/img/dog-shape.svg);
-    mask-size: auto;
-    mask-repeat: no-repeat;
-    mask-position: center;
-
-    -webkit-mask-image: url(/img/dog-shape.svg);
-    -webkit-mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
+    @include maskImage("/img/dog-shape.svg");
   }
 
   &__title {

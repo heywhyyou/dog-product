@@ -1,6 +1,6 @@
 // font-family: 'Poppins', sans-serif;
 // font-family: 'Roboto', sans-serif;
-// TODO: remove import, connect the fonts from the local files
+@use "../abstracts/variables" as *;
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;900&display=swap");
 
@@ -10,7 +10,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #170c04;
+  color: $black;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
@@ -29,7 +29,7 @@ h3 {
 }
 
 p {
-  color: #170c04;
+  color: $black;
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;

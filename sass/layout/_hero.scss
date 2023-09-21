@@ -4,7 +4,7 @@
   padding-top: 10rem;
   width: 100%;
   margin: 0 auto;
-  background: rgba(226, 123, 58, 0.15);
+  background: $secondary;
 
   &__grid {
     display: grid;
@@ -25,7 +25,7 @@
   }
 
   &__welcome {
-    color: #848484;
+    color: $dark-gray;
     font-family: Poppins;
     font-size: 2rem;
     font-style: normal;
@@ -34,7 +34,7 @@
   }
 
   &__title {
-    color: #3c424c;
+    color: $black;
     font-family: Poppins;
     font-size: 7rem;
     font-style: normal;
@@ -50,7 +50,7 @@
 
   &__description {
     margin-top: 0.5rem;
-    color: #848484;
+    color: $dark-gray;
     font-family: Poppins;
     font-size: 1.6rem;
     font-style: normal;

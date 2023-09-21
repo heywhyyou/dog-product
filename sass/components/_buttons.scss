@@ -1,6 +1,4 @@
-// <a
-// href="#"
-// class="btn btn-trans btn-small-br">
+@use "../abstracts/variables" as *;
 
 .btn {
   font-family: "Roboto", sans-serif;
@@ -13,18 +11,18 @@
   cursor: pointer;
   justify-content: center;
   &-primary {
-    background: #f29555;
-    color: #fff;
+    background: $primary;
+    color: $white;
   }
 
   &-transparent {
-    background: #fff;
-    color: #f29555;
+    background: $white;
+    color: $primary;
   }
 
   &-small-br,
   &-big-br {
-    border: 1px solid lighten(#f29555, 15);
+    border: 1px solid lighten($primary, 15);
   }
 
   &-small-br {

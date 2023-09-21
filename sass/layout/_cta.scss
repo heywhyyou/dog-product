@@ -60,7 +60,8 @@
       0% 97.108%,
       0% 11.495%
     );
-    background-color: #2e96ff;
+    background-color: $vivid-blue;
+
     @media (width <= map-get($breakpoints, md)) {
       grid-template-columns: 1fr;
       grid-template-rows: unset;
@@ -111,13 +112,13 @@
   }
 
   &__heading {
-    color: #fff;
+    color: $white;
     font-family: "Poppins", sans-serif;
     font-size: 3rem;
     font-weight: 500;
   }
   &__text {
-    color: #fff;
+    color: $white;
     margin-top: 2rem;
   }
 }

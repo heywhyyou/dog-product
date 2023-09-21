@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .care {
   margin-top: 13rem;
@@ -7,6 +8,7 @@
     display: grid;
     grid-template-columns: 7fr 5fr;
     grid-template-rows: 53.5rem;
+    gap: 3rem;
     @media (width <= map-get($breakpoints, lg)) {
       grid-template-columns: 1fr;
       gap: 5rem;
@@ -14,32 +16,14 @@
   }
 
   &__mask {
-    mask-image: url(/img/care-mask.svg);
-    mask-size: auto;
-    mask-repeat: no-repeat;
-    mask-position: center;
-
-    -webkit-mask-image: url(/img/care-mask.svg);
-    -webkit-mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
+    @include maskImage("/img/care-mask.svg");
   }
 
-  // &__mask-img {
-  //   clip-path: url(#clipping);
-  //   overflow: hidden;
-  //   object-fit: cover;
-  // }
-
   &__image {
-    position: relative;
     display: flex;
-    pointer-events: none;
     margin-left: -8rem;
-    svg {
-      position: absolute;
-    }
-    @media (width <= map-get($breakpoints, lg)) {
+
+    @media (width <= map-get($breakpoints, xl)) {
       margin-left: 0;
     }
   }
@@ -53,7 +37,7 @@
 
   &__title {
     margin-bottom: 0.4rem;
-    color: #f29555;
+    color: $primary;
     font-family: "Roboto", sans-serif;
     font-size: 1.6rem;
     font-weight: 500;

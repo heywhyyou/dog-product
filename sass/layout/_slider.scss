@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 .slider {
   margin: 12rem 0;
   position: relative;
@@ -12,7 +14,7 @@
   }
   &__item {
     border-radius: 1rem;
-    background: #fff;
+    background: $white;
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.06);
     padding: 2.5rem 2.8rem;
   }
@@ -28,12 +30,12 @@
   }
 
   &__description {
-    color: #9e9996;
+    color: $grayish-orange;
     text-align: center;
   }
 
   &__name {
-    color: #170c04;
+    color: $black;
     text-align: center;
     font-family: "Roboto";
     font-size: 1.6rem;
@@ -43,7 +45,7 @@
   }
 
   &__job {
-    color: #9e9996;
+    color: $grayish-orange;
     text-align: center;
     font-family: "Roboto";
     font-size: 1.2rem;
@@ -67,4 +69,5 @@
   border-radius: 18px;
   font-size: 22px;
   font-weight: bold;
+  box-sizing: border-box;
 }

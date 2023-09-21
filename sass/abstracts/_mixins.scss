@@ -1,0 +1,11 @@
+@mixin maskImage($url) {
+  mask-image: url($url);
+  mask-size: auto;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  -webkit-mask-image: url($url);
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
