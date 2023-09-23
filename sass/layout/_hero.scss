@@ -28,18 +28,13 @@
     color: $dark-gray;
     font-family: Poppins;
     font-size: 2rem;
-    font-style: normal;
     font-weight: 500;
     line-height: 120%; /* 2.4rem */
   }
 
   &__title {
     color: $black;
-    font-family: Poppins;
-    font-size: 7rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 120%; /* 8.4rem */
+    font-family: "Poppins", sans-serif;
     @media (width <= map-get($breakpoints, lg)) {
       text-align: center;
     }
@@ -53,9 +48,7 @@
     color: $dark-gray;
     font-family: Poppins;
     font-size: 1.6rem;
-    font-style: normal;
     font-weight: 400;
-    line-height: 120%; /* 1.92rem */
     @media (width <= map-get($breakpoints, lg)) {
       text-align: center;
     }

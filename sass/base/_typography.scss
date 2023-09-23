@@ -1,6 +1,7 @@
 // font-family: 'Poppins', sans-serif;
 // font-family: 'Roboto', sans-serif;
 @use "../abstracts/variables" as *;
+// use mixins
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;900&display=swap");
 
@@ -16,7 +17,7 @@ h6 {
 }
 
 h1 {
-  font-size: 10rem;
+  font-size: 7rem;
   font-weight: 700;
 }
 
@@ -34,4 +35,19 @@ p {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.4rem; /* 150% */
+}
+
+@each $fonts, $font in $fonts {
+  @each $prop, $_ in $font {
+    @font-face {
+      font-family: "#{$fonts} #{$prop}";
+      src: url("/fonts/#{$fonts}/#{$fonts}-#{$prop}/#{$fonts}-#{$prop}.woff2")
+          format("woff2"),
+        url("/fonts/#{$fonts}/#{$fonts}-#{$prop}/#{$fonts}-#{$prop}.woff")
+          format("woff");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+  }
 }

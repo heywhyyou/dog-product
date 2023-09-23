@@ -31,7 +31,7 @@ h6 {
 }
 
 h1 {
-  font-size: 10rem;
+  font-size: 7rem;
   font-weight: 700;
 }
 
@@ -51,6 +51,20 @@ p {
   line-height: 2.4rem; /* 150% */
 }
 
+@font-face {
+  font-family: "font1 ";
+  src: url("/fonts/font1/font1-/font1-.woff2") format("woff2"), url("/fonts/font1/font1-/font1-.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "font2 ";
+  src: url("/fonts/font2/font2-/font2-.woff2") format("woff2"), url("/fonts/font2/font2-/font2-.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 .header {
   padding: 3.4rem 0;
   position: absolute;
@@ -108,17 +122,12 @@ p {
   color: #848484;
   font-family: Poppins;
   font-size: 2rem;
-  font-style: normal;
   font-weight: 500;
   line-height: 120%; /* 2.4rem */
 }
 .hero__title {
   color: #170c04;
-  font-family: Poppins;
-  font-size: 7rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%; /* 8.4rem */
+  font-family: "Poppins", sans-serif;
 }
 @media (width <= 992px) {
   .hero__title {
@@ -135,9 +144,7 @@ p {
   color: #848484;
   font-family: Poppins;
   font-size: 1.6rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: 120%; /* 1.92rem */
 }
 @media (width <= 992px) {
   .hero__description {
@@ -220,18 +227,14 @@ p {
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 25px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .features__description {
   color: #170c04;
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: 2.4rem;
   margin-bottom: 1.3rem;
 }
 .features__link {
@@ -334,11 +337,11 @@ p {
   }
 }
 .care__mask {
-  mask-image: url("/img/care-mask.svg");
+  mask-image: url("/img/svg/care-mask.svg");
   mask-size: auto;
   mask-repeat: no-repeat;
   mask-position: center;
-  -webkit-mask-image: url("/img/care-mask.svg");
+  -webkit-mask-image: url("/img/svg/care-mask.svg");
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -433,11 +436,11 @@ p {
   }
 }
 .subscription__image {
-  mask-image: url("/img/dog-shape.svg");
+  mask-image: url("/img/svg/dog-shape.svg");
   mask-size: auto;
   mask-repeat: no-repeat;
   mask-position: center;
-  -webkit-mask-image: url("/img/dog-shape.svg");
+  -webkit-mask-image: url("/img/svg/dog-shape.svg");
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -624,18 +627,14 @@ p {
   text-align: center;
   font-family: "Roboto";
   font-size: 1.6rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: 2.4rem; /* 150% */
 }
 .slider__job {
   color: #c5c2c0;
   text-align: center;
   font-family: "Roboto";
   font-size: 1.2rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: 2.4rem; /* 200% */
 }
 
 .swiper {
@@ -713,7 +712,6 @@ p {
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
   opacity: 0.8;
@@ -744,7 +742,6 @@ p {
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-size: 2.6rem;
-  font-style: normal;
   font-weight: 500;
   line-height: normal;
   align-self: center;
