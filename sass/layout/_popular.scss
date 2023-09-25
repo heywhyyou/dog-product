@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .popular {
   $this: &;
@@ -20,7 +21,7 @@
     grid-template-areas:
       "a a a b b b"
       "c c d d e e";
-    gap: 3rem;
+    gap: $gap-lg;
     margin-top: 5rem;
     @media (width <= map-get($breakpoints, lg)) {
       grid-template-areas:
@@ -70,14 +71,11 @@
     border-radius: 10px;
     background: $secondary;
     width: 100%;
-    padding: 2rem;
+    padding: $gap;
   }
 
   &__title {
-    color: $black;
-    font-family: "Poppins", sans-serif;
-    font-size: 2rem;
-    font-weight: 500;
+    @include font($poppins, $black, 2rem, 500);
     margin-top: 2.3rem;
     text-align: center;
   }

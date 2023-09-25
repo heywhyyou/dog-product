@@ -1,9 +1,8 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .btn {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
+  @include font($roboto, inherit, 1.6rem, 400);
   padding: 1.45rem 3rem;
   border: none;
   display: inline-flex;

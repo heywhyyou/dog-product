@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .footer {
   margin-top: 13.8rem;
@@ -41,13 +42,12 @@
     display: grid;
     padding: 4rem 0 8.2rem;
     grid-template-columns: repeat(3, 1fr);
+    position: relative;
     @media (width <= map-get($breakpoints, md)) {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 1fr);
-      gap: 3rem;
+      gap: $gap-lg;
     }
-
-    position: relative;
   }
 
   &__ul {
@@ -59,12 +59,7 @@
 
   &__link,
   &__list-contact {
-    color: $white;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: normal;
-    opacity: 0.8;
+    @include font($roboto, $white, 1.6rem, 400, normal);
     @media (width <= map-get($breakpoints, md)) {
       text-align: center;
     }
@@ -88,11 +83,7 @@
   }
 
   &__heading {
-    color: $white;
-    font-family: "Roboto", sans-serif;
-    font-size: 2.6rem;
-    font-weight: 500;
-    line-height: normal;
+    @include font($roboto, $white, 2.6rem, 500, normal);
     align-self: center;
   }
 

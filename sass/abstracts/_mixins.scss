@@ -9,3 +9,19 @@
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
 }
+
+@mixin font(
+  $family,
+  $color,
+  $size,
+  $weight: 400,
+  $line-height: 1,
+  $style: normal
+) {
+  font-family: $family;
+  color: $color;
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  line-height: $line-height;
+}

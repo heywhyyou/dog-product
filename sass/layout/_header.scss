@@ -1,9 +1,10 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .header {
   padding: 3.4rem 0;
-  position: absolute;
   width: 100%;
+  background: $secondary;
 
   &__grid {
     display: flex;
@@ -19,10 +20,7 @@
   }
 
   &__link {
-    color: $black;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
+    @include font($roboto, $roboto, 1.6rem, 400, normal);
     text-decoration: none;
   }
 

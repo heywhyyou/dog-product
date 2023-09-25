@@ -1,9 +1,10 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
-.cta {
+.feedback {
   margin: 7rem 0;
   &__grid {
-    gap: 3rem;
+    gap: $gap-lg;
     display: grid;
     padding: 0 6.7rem;
     grid-template-columns: repeat(2, 1fr);
@@ -61,14 +62,13 @@
       0% 11.495%
     );
     background-color: $vivid-blue;
-
     @media (width <= map-get($breakpoints, md)) {
       grid-template-columns: 1fr;
       grid-template-rows: unset;
       background-size: cover;
     }
     @media (width <= map-get($breakpoints, sm)) {
-      padding-inline: 3rem;
+      padding-inline: $gap-lg;
     }
   }
 
@@ -86,16 +86,13 @@
     padding: 2.5rem;
     border: none;
     &::placeholder {
-      color: #a29e9b;
-      font-family: "Roboto", sans-serif;
-      font-size: 1.6rem;
-      font-weight: 400;
+      @include font($roboto, #a29e9b, 1.6rem, 400);
     }
   }
 
   &__info {
     @media (width <= map-get($breakpoints, md)) {
-      margin-top: 3rem;
+      margin-top: $gap-lg;
       text-align: center;
     }
   }
@@ -112,13 +109,10 @@
   }
 
   &__heading {
-    color: $white;
-    font-family: "Poppins", sans-serif;
-    font-size: 3rem;
-    font-weight: 500;
+    @include font($poppins, $white, 3rem, 500);
   }
   &__text {
-    color: $white;
-    margin-top: 2rem;
+    color: #c0dfff;
+    margin-top: $gap;
   }
 }

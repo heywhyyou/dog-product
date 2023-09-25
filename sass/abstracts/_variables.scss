@@ -25,13 +25,9 @@ $grayish-orange: #c5c2c0;
 $very-light-gray: #e2e2e2;
 $vivid-blue: #2e96ff;
 
-// sizes
-//    paddings
-//    gaps
-//    margins
 $gap: 2rem;
 $gap-lg: 3rem;
 
-// mixins
-
-// fonts
+$rest-fonts: system-ui, sans-serif;
+$poppins: "Poppins", $rest-fonts;
+$roboto: "Roboto", $rest-fonts;

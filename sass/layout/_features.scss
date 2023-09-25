@@ -1,12 +1,12 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .features {
   margin-top: 13rem;
-
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    gap: $gap-lg;
     @media (width <= map-get($breakpoints, md)) {
       grid-template-columns: 1fr;
       gap: 5rem;
@@ -66,19 +66,13 @@
   }
 
   &__title {
-    color: $black;
+    @include font($poppins, $black, 2.5rem, 400, normal);
     text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-size: 25px;
-    font-weight: 400;
   }
 
   &__description {
-    color: $black;
+    @include font($roboto, $black, 1.6rem, 400, normal);
     text-align: center;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
     margin-bottom: 1.3rem;
   }
 

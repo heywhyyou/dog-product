@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .slider {
   margin: 12rem 0;
@@ -23,9 +24,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: $gap;
     img {
       max-width: 30px;
+      border-radius: 50%;
     }
   }
 
@@ -35,19 +37,12 @@
   }
 
   &__name {
-    color: $black;
-    text-align: center;
-    font-family: "Roboto";
-    font-size: 1.6rem;
-    font-weight: 400;
+    @include font($roboto, $black, 1.6rem, 400);
   }
 
   &__job {
-    color: $grayish-orange;
+    @include font($roboto, $grayish-orange, 1.2rem, 400);
     text-align: center;
-    font-family: "Roboto";
-    font-size: 1.2rem;
-    font-weight: 400;
   }
 }
 

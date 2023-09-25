@@ -6,17 +6,14 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: $gap;
     margin-top: 12rem;
     @media (width <= map-get($breakpoints, md)) {
       grid-template-columns: 1fr;
     }
     @media (width <= map-get($breakpoints, sm)) {
-      gap: 3rem;
+      gap: $gap-lg;
     }
-  }
-
-  &__items {
   }
 
   &__heading {
@@ -33,8 +30,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 17rem;
-    column-gap: 2rem;
-    row-gap: 3rem;
+    column-gap: $gap;
+    row-gap: $gap-lg;
     @media (width <= map-get($breakpoints, sm)) {
       grid-template-columns: 1fr;
     }

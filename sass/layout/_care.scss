@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: 7fr 5fr;
     grid-template-rows: 53.5rem;
-    gap: 3rem;
+    gap: $gap-lg;
     @media (width <= map-get($breakpoints, lg)) {
       grid-template-columns: 1fr;
       gap: 5rem;
@@ -37,10 +37,7 @@
 
   &__title {
     margin-bottom: 0.4rem;
-    color: $primary;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.6rem;
-    font-weight: 500;
+    @include font($roboto, $primary, 1.6rem, 500);
     letter-spacing: 0.32rem;
     text-transform: uppercase;
   }
@@ -55,7 +52,7 @@
 
   &__buttons {
     display: flex;
-    gap: 3rem;
+    gap: $gap-lg;
     @media (width <= map-get($breakpoints, lg)) {
       justify-content: center;
     }

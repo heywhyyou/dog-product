@@ -1,9 +1,8 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 a {
-  color: #f29555;
+  @include font($roboto, $primary, 1.6rem, 400, 2.4rem);
   text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
   text-decoration: none;
-  line-height: 24px;
 }
