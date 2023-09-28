@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .gallery {
   $this: &;
@@ -8,10 +9,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: $gap;
     margin-top: 12rem;
-    @media (width <= map-get($breakpoints, md)) {
+    @include media-breakpoint-down(md) {
       grid-template-columns: 1fr;
     }
-    @media (width <= map-get($breakpoints, sm)) {
+    @include media-breakpoint-down(sm) {
       gap: $gap-lg;
     }
   }
@@ -32,7 +33,7 @@
     grid-auto-rows: 17rem;
     column-gap: $gap;
     row-gap: $gap-lg;
-    @media (width <= map-get($breakpoints, sm)) {
+    @include media-breakpoint-down(sm) {
       grid-template-columns: 1fr;
     }
   }

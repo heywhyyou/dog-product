@@ -33,7 +33,7 @@
   }
 
   &__contacts {
-    @media (width <= map-get($breakpoints, md)) {
+    @include media-breakpoint-down(md) {
       grid-row: 2;
     }
   }
@@ -43,7 +43,7 @@
     padding: 4rem 0 8.2rem;
     grid-template-columns: repeat(3, 1fr);
     position: relative;
-    @media (width <= map-get($breakpoints, md)) {
+    @include media-breakpoint-down(md) {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 1fr);
       gap: $gap-lg;
@@ -60,13 +60,13 @@
   &__link,
   &__list-contact {
     @include font($roboto, $white, 1.6rem, 400, normal);
-    @media (width <= map-get($breakpoints, md)) {
+    @include media-breakpoint-down(md) {
       text-align: center;
     }
   }
 
   &__list &__list-conact {
-    @media (width <= map-get($breakpoints, md)) {
+    @include media-breakpoint-down(md) {
       display: flex;
       flex-direction: column;
     }
@@ -76,7 +76,7 @@
     display: flex;
     flex-direction: column;
     gap: 6.6rem;
-    @media (width <= map-get($breakpoints, md)) {
+    @include media-breakpoint-down(md) {
       grid-column: 1 / -1;
       gap: 3.3rem;
     }
@@ -108,7 +108,7 @@
   }
 
   &__navigation {
-    @media (width <= map-get($breakpoints, md)) {
+    @include media-breakpoint-down(md) {
       grid-row: 3;
       grid-column: 1 / -1;
       align-items: center;
@@ -117,7 +117,7 @@
 
   &__navigation &__ul,
   &__contacts &__ul {
-    @media (width <= map-get($breakpoints, md)) {
+    @include media-breakpoint-down(md) {
       align-items: center;
     }
   }

@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 @mixin maskImage($url) {
   mask-image: url($url);
   mask-size: auto;
@@ -24,4 +26,16 @@
   font-style: $style;
   font-weight: $weight;
   line-height: $line-height;
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+  @media (width <= map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-up($breakpoint) {
+  @media (width >= map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
 }

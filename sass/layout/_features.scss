@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: $gap-lg;
-    @media (width <= map-get($breakpoints, md)) {
+    @include media-breakpoint-down(md) {
       grid-template-columns: 1fr;
       gap: 5rem;
     }

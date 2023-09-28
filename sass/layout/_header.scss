@@ -20,14 +20,14 @@
   }
 
   &__link {
-    @include font($roboto, $roboto, 1.6rem, 400, normal);
+    @include font($roboto, $black, 1.6rem, 400, normal);
     text-decoration: none;
   }
 
   &__nav,
   &__cart,
   &__search {
-    @media (width <= map-get($breakpoints, md)) {
+    @include media-breakpoint-down(md) {
       display: none;
     }
   }

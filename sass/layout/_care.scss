@@ -9,7 +9,8 @@
     grid-template-columns: 7fr 5fr;
     grid-template-rows: 53.5rem;
     gap: $gap-lg;
-    @media (width <= map-get($breakpoints, lg)) {
+
+    @include media-breakpoint-down(lg) {
       grid-template-columns: 1fr;
       gap: 5rem;
     }
@@ -23,14 +24,14 @@
     display: flex;
     margin-left: -8rem;
 
-    @media (width <= map-get($breakpoints, xl)) {
+    @include media-breakpoint-down(xl) {
       margin-left: 0;
     }
   }
 
   &__details {
     align-self: center;
-    @media (width <= map-get($breakpoints, lg)) {
+    @include media-breakpoint-down(lg) {
       text-align: center;
     }
   }
@@ -53,10 +54,10 @@
   &__buttons {
     display: flex;
     gap: $gap-lg;
-    @media (width <= map-get($breakpoints, lg)) {
+    @include media-breakpoint-down(lg) {
       justify-content: center;
     }
-    @media (width <= map-get($breakpoints, md)) {
+    @include media-breakpoint-down(md) {
       flex-direction: column;
     }
   }

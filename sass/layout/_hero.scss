@@ -11,13 +11,14 @@
     grid-template-rows: 50rem;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    @media (width <= map-get($breakpoints, lg)) {
+    @include media-breakpoint-down(lg) {
       grid-template-columns: 1fr;
     }
   }
 
   &__text {
-    @media (width <= map-get($breakpoints, lg)) {
+    @include media-breakpoint-down(lg) {
+      display: none;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -30,10 +31,10 @@
 
   &__title {
     @include font($poppins, $black, 7rem, 700, 120%);
-    @media (width <= map-get($breakpoints, lg)) {
+    @include media-breakpoint-down(lg) {
       text-align: center;
     }
-    @media (width <= map-get($breakpoints, sm)) {
+    @include media-breakpoint-down(sm) {
       font-size: 5rem;
     }
   }
@@ -41,7 +42,7 @@
   &__description {
     margin-top: 0.5rem;
     @include font($poppins, $dark-gray, 1.6rem, 400, 120%);
-    @media (width <= map-get($breakpoints, lg)) {
+    @include media-breakpoint-down(lg) {
       text-align: center;
     }
   }
