@@ -42,24 +42,32 @@
           <div class="header__icons">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="26"
-              height="26"
+              width="24"
+              height="24"
+              class="header__search"
+            >
+              <use xlink:href="img/svg/sprite.svg#search-icon"></use>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
               class="header__cart"
             >
               <use xlink:href="img/svg/sprite.svg#cart-icon"></use>
             </svg>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="26"
-              height="26"
-              class="header__search"
+              width="24"
+              height="24"
+              class="header__user"
             >
-              <use xlink:href="img/svg/sprite.svg#lens-icon"></use>
+              <use xlink:href="img/svg/sprite.svg#user-icon"></use>
             </svg>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="26"
-              height="26"
+              width="24"
+              height="24"
               class="header__burger"
             >
               <use xlink:href="img/svg/sprite.svg#burger-icon"></use>
@@ -68,7 +76,6 @@
         </div>
       </div>
     </header>
-
     <main>
       <section class="hero">
         <div class="container">
@@ -84,10 +91,13 @@
               </p>
 
               <div class="hero__buttons">
-                <button class="btn btn-primary btn-big-br">Buy Now</button>
-                <button class="btn btn-transparent btn-big-br">
-                  See Details
+                <button class="btn btn-primary btn-big-br btn--show-modal">
+                  Buy Now
                 </button>
+
+                <a href="#" class="btn btn-transparent btn-big-br">
+                  See Details
+                </a>
               </div>
             </div>
             <div class="hero__image">
@@ -252,9 +262,9 @@
                 <button class="btn btn-primary btn-big-br">
                   Appointment Now
                 </button>
-                <button class="btn btn-transparent btn-big-br">
+                <a href="" class="btn btn-transparent btn-big-br">
                   See Details
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -558,12 +568,14 @@
               </p>
             </div>
             <div class="feedback__form-wrapper">
-              <form class="feedback__form">
+              <form class="feedback__form" netlify>
                 <div class="feedback__form-group">
                   <input
                     type="text"
                     class="feedback__input"
                     placeholder="Enter your message"
+                    maxlength="100"
+                    required
                   />
                   <button class="btn btn-primary feedback__btn">Send</button>
                 </div>
@@ -624,19 +636,40 @@
           <div class="footer__navigation">
             <ul class="footer__ul">
               <li class="footer__list">
-                <a href="#" class="footer__link">Dog Care</a>
+                <a href="#care" class="footer__link">Dog Care</a>
               </li>
               <li class="footer__list">
                 <a href="#" class="footer__link">Privacy & Policy</a>
               </li>
               <li class="footer__list">
-                <a href="#" class="footer__link">Popular Product</a>
+                <a href="#products" class="footer__link">Popular Product</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </footer>
+
+    <div class="modal hidden">
+      <button class="modal__close-btn js-close-modal btn--close-modal">
+        &times;
+      </button>
+      <h2 class="modal__header">Contact us</h2>
+      <form class="modal__form" netlify>
+        <div class="modal__form-control">
+          <label class="modal__label">First Name</label>
+          <input class="modal__input" type="text" required />
+        </div>
+
+        <div class="modal__form-control">
+          <label class="modal__label">Email Address</label>
+          <input class="modal__input" type="email" required />
+        </div>
+
+        <button class="btn btn-primary btn-big-br">Send</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>

@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 @font-face {
   font-family: "Roboto";
@@ -40,13 +41,29 @@
   font-display: swap;
 }
 
+// TODO: replace font-face to ~this
+// @each $fonts, $font in $fonts {
+//   @each $prop, $_ in $font {
+//     @font-face {
+//       font-family: "#{$fonts} #{$prop}";
+//       src: url("/fonts/#{$fonts}/#{$fonts}-#{$prop}/#{$fonts}-#{$prop}.woff2")
+//           format("woff2"),
+//         url("/fonts/#{$fonts}/#{$fonts}-#{$prop}/#{$fonts}-#{$prop}.woff")
+//           format("woff");
+//       font-weight: normal;
+//       font-style: normal;
+//       font-display: swap;
+//     }
+//   }
+// }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: $black;
+  color: $color-black;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
@@ -65,24 +82,5 @@ h3 {
 }
 
 p {
-  color: $black;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 2.4rem; /* 150% */
-}
-
-@each $fonts, $font in $fonts {
-  @each $prop, $_ in $font {
-    @font-face {
-      font-family: "#{$fonts} #{$prop}";
-      src: url("/fonts/#{$fonts}/#{$fonts}-#{$prop}/#{$fonts}-#{$prop}.woff2")
-          format("woff2"),
-        url("/fonts/#{$fonts}/#{$fonts}-#{$prop}/#{$fonts}-#{$prop}.woff")
-          format("woff");
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-  }
+  @include font($roboto, $color-black, 1.6rem, 400, 2.4rem);
 }

@@ -1,7 +1,9 @@
+@use "../abstracts/variables" as *;
+
 .stars-rated {
-  fill: #f29555;
+  fill: $color-primary;
 }
 
 .stars-unrated {
-  fill: #e2e2e2;
+  fill: $color-light-gray;
 }

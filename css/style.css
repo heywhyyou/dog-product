@@ -12,6 +12,16 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 1 0;
+}
+
 .container {
   max-width: 1170px;
   width: 100%;
@@ -79,27 +89,19 @@ h3 {
 }
 
 p {
+  font-family: "Roboto", sans-serif, system-ui;
   color: #170c04;
-  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
+  font-style: normal;
   font-weight: 400;
-  line-height: 2.4rem; /* 150% */
+  line-height: 2.4rem;
 }
 
-@font-face {
-  font-family: "font1 ";
-  src: url("/fonts/font1/font1-/font1-.woff2") format("woff2"), url("/fonts/font1/font1-/font1-.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }
-@font-face {
-  font-family: "font2 ";
-  src: url("/fonts/font2/font2-/font2-.woff2") format("woff2"), url("/fonts/font2/font2-/font2-.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+
 .header {
   padding: 3.4rem 0;
   width: 100%;
@@ -117,7 +119,7 @@ p {
   gap: 5.5rem;
 }
 .header__link {
-  font-family: "Roboto", system-ui, sans-serif;
+  font-family: "Roboto", sans-serif, system-ui;
   color: #170c04;
   font-size: 1.6rem;
   font-style: normal;
@@ -126,14 +128,25 @@ p {
   text-decoration: none;
 }
 @media (width <= 768px) {
-  .header__nav, .header__cart, .header__search {
+  .header__nav, .header__cart, .header__search, .header__user {
     display: none;
+  }
+}
+.header__icons {
+  display: flex;
+  gap: 4rem;
+}
+.header__burger {
+  display: none;
+}
+@media (width <= 768px) {
+  .header__burger {
+    display: block;
   }
 }
 
 .hero {
   width: 100%;
-  margin: 0 auto;
   background: #fbebe2;
 }
 .hero__grid {
@@ -156,7 +169,7 @@ p {
   }
 }
 .hero__welcome {
-  font-family: "Poppins", system-ui, sans-serif;
+  font-family: "Poppins", sans-serif, system-ui;
   color: #848484;
   font-size: 2rem;
   font-style: normal;
@@ -164,7 +177,7 @@ p {
   line-height: 120%;
 }
 .hero__title {
-  font-family: "Poppins", system-ui, sans-serif;
+  font-family: "Poppins", sans-serif, system-ui;
   color: #170c04;
   font-size: 7rem;
   font-style: normal;
@@ -183,7 +196,7 @@ p {
 }
 .hero__description {
   margin-top: 0.5rem;
-  font-family: "Poppins", system-ui, sans-serif;
+  font-family: "Poppins", sans-serif, system-ui;
   color: #848484;
   font-size: 1.6rem;
   font-style: normal;
@@ -205,10 +218,8 @@ p {
   justify-self: center;
 }
 
-.features {
-  margin-top: 13rem;
-}
 .features__grid {
+  margin-top: 13rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
@@ -267,7 +278,7 @@ p {
   fill: #fdbe24;
 }
 .features__title {
-  font-family: "Poppins", system-ui, sans-serif;
+  font-family: "Poppins", sans-serif, system-ui;
   color: #170c04;
   font-size: 2.5rem;
   font-style: normal;
@@ -276,7 +287,7 @@ p {
   text-align: center;
 }
 .features__description {
-  font-family: "Roboto", system-ui, sans-serif;
+  font-family: "Roboto", sans-serif, system-ui;
   color: #170c04;
   font-size: 1.6rem;
   font-style: normal;
@@ -361,7 +372,7 @@ p {
   padding: 2rem;
 }
 .popular__title {
-  font-family: "Poppins", system-ui, sans-serif;
+  font-family: "Poppins", sans-serif, system-ui;
   color: #170c04;
   font-size: 2rem;
   font-style: normal;
@@ -378,14 +389,11 @@ p {
   text-align: center;
 }
 
-.care {
-  margin-top: 13rem;
-  margin-bottom: 13rem;
-}
 .care__grid {
   display: grid;
   grid-template-columns: 7fr 5fr;
   grid-template-rows: 53.5rem;
+  margin: 13rem 0 13rem;
   gap: 3rem;
 }
 @media (width <= 992px) {
@@ -423,7 +431,7 @@ p {
 }
 .care__title {
   margin-bottom: 0.4rem;
-  font-family: "Roboto", system-ui, sans-serif;
+  font-family: "Roboto", sans-serif, system-ui;
   color: #f29555;
   font-size: 1.6rem;
   font-style: normal;
@@ -578,10 +586,8 @@ p {
   background: #fae8ed;
 }
 
-.feedback {
-  margin: 7rem 0;
-}
 .feedback__grid {
+  margin: 7rem 0;
   gap: 3rem;
   display: grid;
   padding: 0 6.7rem;
@@ -596,11 +602,7 @@ p {
     grid-template-columns: 1fr;
     grid-template-rows: unset;
     background-size: cover;
-  }
-}
-@media (width <= 576px) {
-  .feedback__grid {
-    padding-inline: 3rem;
+    padding: 5rem;
   }
 }
 .feedback__form-group {
@@ -619,7 +621,7 @@ p {
   border: none;
 }
 .feedback__input::placeholder {
-  font-family: "Roboto", system-ui, sans-serif;
+  font-family: "Roboto", sans-serif, system-ui;
   color: #a29e9b;
   font-size: 1.6rem;
   font-style: normal;
@@ -642,7 +644,7 @@ p {
   font-weight: 500;
 }
 .feedback__heading {
-  font-family: "Poppins", system-ui, sans-serif;
+  font-family: "Poppins", sans-serif, system-ui;
   color: #fff;
   font-size: 3rem;
   font-style: normal;
@@ -655,23 +657,27 @@ p {
 }
 
 .slider {
-  margin: 12rem 0;
   position: relative;
 }
 .slider__grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 27rem;
+  margin-bottom: 12rem;
 }
 .slider__heading {
   text-align: center;
-  margin-bottom: 5rem;
+  margin: 12rem 0 5rem;
 }
 .slider__item {
   border-radius: 1rem;
   background: #fff;
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.06);
   padding: 3rem;
+  background-color: #fff;
+  background-image: url(/img/svg/quote.svg), url(/img/svg/quote-reverse.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 95% 90%, 5% 10%;
 }
 .slider__avatar {
   display: flex;
@@ -688,7 +694,7 @@ p {
   text-align: center;
 }
 .slider__name {
-  font-family: "Roboto", system-ui, sans-serif;
+  font-family: "Roboto", sans-serif, system-ui;
   color: #170c04;
   font-size: 1.6rem;
   font-style: normal;
@@ -697,7 +703,7 @@ p {
   margin-top: 1rem;
 }
 .slider__job {
-  font-family: "Roboto", system-ui, sans-serif;
+  font-family: "Roboto", sans-serif, system-ui;
   color: #c5c2c0;
   font-size: 1.2rem;
   font-style: normal;
@@ -721,6 +727,7 @@ p {
   font-size: 22px;
   font-weight: bold;
   box-sizing: border-box;
+  height: 30rem !important;
 }
 
 .footer {
@@ -778,7 +785,7 @@ p {
   gap: 3.7rem;
 }
 .footer__link, .footer__list-contact {
-  font-family: "Roboto", system-ui, sans-serif;
+  font-family: "Roboto", sans-serif, system-ui;
   color: #fff;
   font-size: 1.6rem;
   font-style: normal;
@@ -808,7 +815,7 @@ p {
   }
 }
 .footer__heading {
-  font-family: "Roboto", system-ui, sans-serif;
+  font-family: "Roboto", sans-serif, system-ui;
   color: #fff;
   font-size: 2.6rem;
   font-style: normal;
@@ -847,7 +854,7 @@ p {
 }
 
 a {
-  font-family: "Roboto", system-ui, sans-serif;
+  font-family: "Roboto", sans-serif, system-ui;
   color: #f29555;
   font-size: 1.6rem;
   font-style: normal;
@@ -858,7 +865,7 @@ a {
 }
 
 .btn {
-  font-family: "Roboto", system-ui, sans-serif;
+  font-family: "Roboto", sans-serif, system-ui;
   color: inherit;
   font-size: 1.6rem;
   font-style: normal;
@@ -903,6 +910,94 @@ img {
 
 .stars-unrated {
   fill: #e2e2e2;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  width: calc(100% - 30px);
+  background-color: #f3f3f3;
+  padding: 5rem 6rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+  border-radius: 3rem;
+}
+.modal__input {
+  width: 100%;
+}
+.modal__form-control {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  grid-template-columns: 1fr 3fr;
+  width: 100%;
+}
+@media (width <= 768px) {
+  .modal__form-control {
+    grid-template-columns: 1fr;
+  }
+}
+.modal__label {
+  font-family: "Roboto", sans-serif, system-ui;
+  color: #170c04;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+.modal__header {
+  font-size: 3.25rem;
+  margin-bottom: 4.5rem;
+  line-height: 1.5;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+.modal__form label {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.modal__form input {
+  font-size: 1.7rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+}
+.modal__form button {
+  justify-self: center;
+  margin-top: 1rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.btn--close-modal {
+  font-family: inherit;
+  color: inherit;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 4rem;
+  cursor: pointer;
+  border: none;
+  background: none;
 }
 
 /*# sourceMappingURL=style.css.map */

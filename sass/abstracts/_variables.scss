@@ -6,28 +6,19 @@ $breakpoints: (
   xxl: 1400px,
 );
 
-$fonts: ("font1", "font2");
-
-// colors
-$primary: #f29555;
-$secondary: #fbebe2;
-$white: #fff;
-$black: #170c04;
-$dark-gray: #848484;
-$dark-grayish-orange: #746d68;
-$light-red: #f4e7e6;
-$light-blue: #e9ecf2;
-$light-red-2: #f2e6e9;
-$light-pink: #f9f4f7;
-$light-pink-2: #f9e8ed;
-$light-yellow: #f3f3f2;
-$grayish-orange: #c5c2c0;
-$very-light-gray: #e2e2e2;
-$vivid-blue: #2e96ff;
+$color-primary: #f29555;
+$color-secondary: #fbebe2;
+$color-white: #fff;
+$color-black: #170c04;
+$color-light-gray: #e2e2e2;
+$color-dark-gray: #848484;
+$color-light-red: #f4e7e6;
+$color-grayish-orange: #c5c2c0;
+$color-vivid-blue: #2e96ff;
 
 $gap: 2rem;
 $gap-lg: 3rem;
 
-$rest-fonts: system-ui, sans-serif;
+$rest-fonts: sans-serif, system-ui;
 $poppins: "Poppins", $rest-fonts;
 $roboto: "Roboto", $rest-fonts;

@@ -2,22 +2,26 @@
 @use "../abstracts/mixins" as *;
 
 .slider {
-  margin: 12rem 0;
   position: relative;
   &__grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 27rem;
+    margin-bottom: 12rem;
   }
   &__heading {
     text-align: center;
-    margin-bottom: 5rem;
+    margin: 12rem 0 5rem;
   }
   &__item {
     border-radius: 1rem;
-    background: $white;
+    background: $color-white;
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.06);
     padding: 3rem;
+    background-color: #fff;
+    background-image: url(/img/svg/quote.svg), url(/img/svg/quote-reverse.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 95% 90%, 5% 10%;
   }
 
   &__avatar {
@@ -32,17 +36,17 @@
   }
 
   &__description {
-    color: $grayish-orange;
+    color: $color-grayish-orange;
     text-align: center;
   }
 
   &__name {
-    @include font($roboto, $black, 1.6rem, 400);
+    @include font($roboto, $color-black, 1.6rem, 400);
     margin-top: 1rem;
   }
 
   &__job {
-    @include font($roboto, $grayish-orange, 1.2rem, 400);
+    @include font($roboto, $color-grayish-orange, 1.2rem, 400);
     text-align: center;
   }
 }
@@ -62,4 +66,5 @@
   font-size: 22px;
   font-weight: bold;
   box-sizing: border-box;
+  height: 30rem !important;
 }

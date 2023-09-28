@@ -59,7 +59,7 @@
 
   &__link,
   &__list-contact {
-    @include font($roboto, $white, 1.6rem, 400, normal);
+    @include font($roboto, $color-white, 1.6rem, 400, normal);
     @include media-breakpoint-down(md) {
       text-align: center;
     }
@@ -83,7 +83,7 @@
   }
 
   &__heading {
-    @include font($roboto, $white, 2.6rem, 500, normal);
+    @include font($roboto, $color-white, 2.6rem, 500, normal);
     align-self: center;
   }
 

@@ -2,12 +2,11 @@
 @use "../abstracts/mixins" as *;
 
 .care {
-  margin-top: 13rem;
-  margin-bottom: 13rem;
   &__grid {
     display: grid;
     grid-template-columns: 7fr 5fr;
     grid-template-rows: 53.5rem;
+    margin: 13rem 0 13rem;
     gap: $gap-lg;
 
     @include media-breakpoint-down(lg) {
@@ -38,7 +37,7 @@
 
   &__title {
     margin-bottom: 0.4rem;
-    @include font($roboto, $primary, 1.6rem, 500);
+    @include font($roboto, $color-primary, 1.6rem, 500);
     letter-spacing: 0.32rem;
     text-transform: uppercase;
   }

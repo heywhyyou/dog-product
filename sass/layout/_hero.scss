@@ -3,9 +3,7 @@
 
 .hero {
   width: 100%;
-  margin: 0 auto;
-  background: $secondary;
-
+  background: $color-secondary;
   &__grid {
     display: grid;
     grid-template-rows: 50rem;
@@ -26,11 +24,11 @@
   }
 
   &__welcome {
-    @include font($poppins, $dark-gray, 2rem, 500, 120%);
+    @include font($poppins, $color-dark-gray, 2rem, 500, 120%);
   }
 
   &__title {
-    @include font($poppins, $black, 7rem, 700, 120%);
+    @include font($poppins, $color-black, 7rem, 700, 120%);
     @include media-breakpoint-down(lg) {
       text-align: center;
     }
@@ -41,7 +39,7 @@
 
   &__description {
     margin-top: 0.5rem;
-    @include font($poppins, $dark-gray, 1.6rem, 400, 120%);
+    @include font($poppins, $color-dark-gray, 1.6rem, 400, 120%);
     @include media-breakpoint-down(lg) {
       text-align: center;
     }

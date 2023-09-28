@@ -2,9 +2,10 @@
 @use "../abstracts/mixins" as *;
 
 .features {
-  margin-top: 13rem;
   &__grid {
+    margin-top: 13rem;
     display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
     grid-template-columns: repeat(3, 1fr);
     gap: $gap-lg;
     @include media-breakpoint-down(md) {
@@ -25,12 +26,12 @@
     align-items: center;
     border-radius: 8px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    background: $white;
+    background: $color-white;
     padding: 40px 25px 18px;
     transition: all 300ms ease;
     &:hover {
-      box-shadow: 0px 4px 14px 0px $secondary;
-      border: 1px solid $white;
+      box-shadow: 0px 4px 14px 0px $color-secondary;
+      border: 1px solid $color-white;
     }
   }
 
@@ -66,12 +67,12 @@
   }
 
   &__title {
-    @include font($poppins, $black, 2.5rem, 400, normal);
+    @include font($poppins, $color-black, 2.5rem, 400, normal);
     text-align: center;
   }
 
   &__description {
-    @include font($roboto, $black, 1.6rem, 400, normal);
+    @include font($roboto, $color-black, 1.6rem, 400, normal);
     text-align: center;
     margin-bottom: 1.3rem;
   }

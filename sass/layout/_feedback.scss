@@ -2,8 +2,8 @@
 @use "../abstracts/mixins" as *;
 
 .feedback {
-  margin: 7rem 0;
   &__grid {
+    margin: 7rem 0;
     gap: $gap-lg;
     display: grid;
     padding: 0 6.7rem;
@@ -61,14 +61,12 @@
       0% 97.108%,
       0% 11.495%
     );
-    background-color: $vivid-blue;
+    background-color: $color-vivid-blue;
     @include media-breakpoint-down(md) {
       grid-template-columns: 1fr;
       grid-template-rows: unset;
       background-size: cover;
-    }
-    @include media-breakpoint-down(sm) {
-      padding-inline: $gap-lg;
+      padding: 5rem;
     }
   }
 
@@ -109,7 +107,7 @@
   }
 
   &__heading {
-    @include font($poppins, $white, 3rem, 500);
+    @include font($poppins, $color-white, 3rem, 500);
   }
   &__text {
     color: #c0dfff;

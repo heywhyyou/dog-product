@@ -10,18 +10,18 @@
   cursor: pointer;
   justify-content: center;
   &-primary {
-    background: $primary;
-    color: $white;
+    background: $color-primary;
+    color: $color-white;
   }
 
   &-transparent {
-    background: $white;
-    color: $primary;
+    background: $color-white;
+    color: $color-primary;
   }
 
   &-small-br,
   &-big-br {
-    border: 1px solid lighten($primary, 15);
+    border: 1px solid lighten($color-primary, 15);
   }
 
   &-small-br {

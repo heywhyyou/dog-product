@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 a {
-  @include font($roboto, $primary, 1.6rem, 400, 2.4rem);
+  @include font($roboto, $color-primary, 1.6rem, 400, 2.4rem);
   text-align: center;
   text-decoration: none;
 }

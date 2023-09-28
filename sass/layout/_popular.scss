@@ -75,13 +75,13 @@
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    background: $secondary;
+    background: $color-secondary;
     width: 100%;
     padding: $gap;
   }
 
   &__title {
-    @include font($poppins, $black, 2rem, 500);
+    @include font($poppins, $color-black, 2rem, 500);
     margin-top: 2.3rem;
     text-align: center;
   }

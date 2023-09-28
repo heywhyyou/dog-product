@@ -4,7 +4,7 @@
 .header {
   padding: 3.4rem 0;
   width: 100%;
-  background: $secondary;
+  background: $color-secondary;
 
   &__grid {
     display: flex;
@@ -20,15 +20,28 @@
   }
 
   &__link {
-    @include font($roboto, $black, 1.6rem, 400, normal);
+    @include font($roboto, $color-black, 1.6rem, 400, normal);
     text-decoration: none;
   }
 
   &__nav,
   &__cart,
-  &__search {
+  &__search,
+  &__user {
     @include media-breakpoint-down(md) {
       display: none;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 4rem;
+  }
+
+  &__burger {
+    display: none;
+    @include media-breakpoint-down(md) {
+      display: block;
     }
   }
 }
